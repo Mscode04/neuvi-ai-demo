@@ -1,0 +1,320 @@
+/* General Styles */
+.HomeApp {
+  background-color: #f4f7f6;
+  min-height: 100vh;
+  color: #333;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+
+/* Topbar Styles */
+.HomeTopbar {
+  height: 60px;
+  background-color: #488be3d2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+}
+
+/* Drawer Styles */
+.HomeDrawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.HomeDrawer.open {
+  left: 0;
+}
+
+.HomeDrawerButton {
+  background-color: #488be3;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.HomeDrawerButton:hover {
+  background-color: rgb(176, 217, 239);
+}
+
+.HomeDrawerCloseButton {
+  background: none;
+  border: none;
+  margin-right: auto;
+  color: #488be3;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.drawer-content {
+  flex: 1;
+}
+
+.drawer-footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.powered-by {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Banner Section */
+.HomeBanner {
+  background-image: url("../assets/img/home-banner-learn.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.HomeBanner h1 {
+  margin-bottom: 10px;
+}
+
+.HomeBanner p {
+  font-size: 1.2rem;
+}
+
+
+
+/* Testimonials Section */
+.HomeTestimonials {
+  padding: 10px;
+  background-color: #f9f9f9 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.rating i{
+  color: #ffd250;
+}
+/* Animation for sliding effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for fading out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.HomeTestimonials h2{
+  color: #366bb0 !important;
+}
+.testimonial-card {
+  background-color: #488be309;
+  max-width: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+/* Smooth transition when feedback changes */
+.slide-animation {
+  animation: slideIn 0.6s ease-in-out, fadeOut 0.6s ease-in-out alternate;
+}
+
+
+
+.testimonial-avatar {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.testimonial-card span {
+  font-size: 0.8rem;
+  color: #488be3;
+}
+
+/* Footer */
+.HomeFooter {
+  text-align: center;
+  padding: 20px;
+  background-color: #13454f;
+  color: white;
+  
+}
+.testimonial-card img{
+  height: 120px;
+  
+}
+
+.user-info img{
+ height: 40PX;
+}
+/* Quote Section */
+.HomeQuotes {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.quote-card {
+  
+  border-radius: 8px;
+  padding: 20px;
+  
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.quote-card p {
+  font-size: 1.2rem;
+  color: #488be3;
+}
+
+/* Ads Section */
+.HomeAds {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.ads-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.ads-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.ads-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Drawer Profile */
+.drawer-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.drawer-avatar {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.drawer-profile span {
+  font-size: 1.2rem;
+  color: #333;
+}
+/* Action Buttons Section */
+.HomeActions {
+  display: flex;
+  background-color: #f9f9f9;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.HomeActions button{
+  border: 3px solid #488be3;
+}
+.action-button {
+  background-color: #f9f9f9;
+  color: #488be3;
+ 
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #366bb0;
+  color: #f9f9f9;
+}
+/* Quote Author */
+.quote-author {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
